@@ -73,7 +73,7 @@ What are the names of the modules imported in this module?
 
 ```python
 >>> module_name_to_imported_module_name_set_dict['thefuck.ui']
-{'thefuck.exceptions', 'thefuck', 'thefuck.conf', 'thefuck.system', 'thefuck.utils'}
+{'thefuck.exceptions', 'thefuck.logs', 'thefuck.const', 'thefuck.conf', 'thefuck.system', 'thefuck.utils'}
 >>> module_name_to_imported_external_module_name_set_dict['thefuck.ui']
 {'sys'}
 ```

@@ -44,10 +44,15 @@ def do_static_import_analysis_for_pure_python_project(project_path: str) -> tupl
             if imported_module_name not in module_name_to_file_path_dict:
                 imported_external_module_name_set.add(imported_module_name)
             else:
-                imported_module_name_set.add(imported_module_name)
+                # imported_module_name concatenated with imported_name itself could also be the name of a module
+                if '.'.join((imported_module_name, imported_name)) in module_name_to_file_path_dict:
+                    imported_module_name_set.add('.'.join((imported_module_name, imported_name)))
+                else:
+                    imported_module_name_set.add(imported_module_name)
 
     return module_name_to_file_path_dict, \
         module_name_to_defined_function_name_set_dict, \
         module_name_to_defined_type_name_set_dict, \
         module_name_to_imported_module_name_set_dict, \
         module_name_to_imported_external_module_name_set_dict
+

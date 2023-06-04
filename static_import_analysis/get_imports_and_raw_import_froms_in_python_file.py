@@ -1,8 +1,8 @@
 import ast
 
-from get_ast_for_python_file import get_ast_for_python_file
-from handle_ast_import import handle_ast_import
-from handle_ast_import_from import handle_ast_import_from
+from .get_ast_for_python_file import get_ast_for_python_file
+from .handle_ast_import import handle_ast_import
+from .handle_ast_import_from import handle_ast_import_from
 
 
 # Returns a `tuple[set[tuple[str, str]], set[tuple[str, int, str, str]]]`

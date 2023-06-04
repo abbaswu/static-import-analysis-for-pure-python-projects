@@ -1,6 +1,6 @@
 import ast
 
-from get_ast_for_python_file import get_ast_for_python_file
+from .get_ast_for_python_file import get_ast_for_python_file
 
 
 def get_function_names_and_class_names_in_python_file(file_path: str) -> tuple[set[str], set[str]]:

@@ -1,4 +1,4 @@
-from get_imports_and_raw_import_froms_in_python_file import get_imports_and_raw_import_froms_in_python_file
+from .get_imports_and_raw_import_froms_in_python_file import get_imports_and_raw_import_froms_in_python_file
 
 
 # Returns a `tuple[set[tuple[str, str]], set[tuple[str, int, str, str]]]`
